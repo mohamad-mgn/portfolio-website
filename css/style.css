@@ -266,10 +266,91 @@ footer {
   cursor: pointer;
 }
 
-/* ===== Responsive Navbar ===== */
+/* ===== Responsive Design ===== */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+  .home p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .skills-container {
+    max-width: 90%;
+  }
+  .skill img {
+    width: 40px;
+    height: 40px;
+  }
+  .progress {
+    height: 10px;
+  }
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* Mobiles (max-width: 768px) */
 @media (max-width: 768px) {
+  /* Home */
+  .home img.profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+  .home h1 {
+    font-size: 1.6rem;
+  }
+  .home p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Skills */
+  .skill {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .skill img {
+    margin-bottom: 10px;
+  }
+  .skill-info {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Projects */
+  .project-list {
+    grid-template-columns: 1fr; /* single column */
+  }
+  .project-card {
+    text-align: center;
+  }
+  .project-card img {
+    max-width: 100%;
+  }
+
+  /* Contact */
+  .contact-info {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+  .contact-card i {
+    font-size: 1.5rem;
+  }
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+  .contact-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Navbar */
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
   nav ul {
-    display: none; /* hide normal menu */
+    display: none; /* hide default menu */
     flex-direction: column;
     background: #1f1f1f;
     position: absolute;
@@ -279,17 +360,30 @@ footer {
     border-radius: 8px;
     padding: 10px 0;
   }
-
   nav ul.show {
-    display: flex; /* show when hamburger clicked */
+    display: flex;
   }
-
   nav ul li {
     margin: 10px 0;
     text-align: center;
   }
+}
 
-  .menu-toggle {
-    display: block; /* show hamburger */
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .home img.profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+  .home h1 {
+    font-size: 1.3rem;
+  }
+  .home p {
+    font-size: 0.85rem;
+  }
+  .skills h1,
+  .projects h1,
+  .contact h1 {
+    font-size: 1.5rem;
   }
 }
