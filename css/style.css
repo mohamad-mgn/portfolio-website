@@ -365,7 +365,7 @@ footer {
     background: #1f1f1f;
     position: absolute;
     top: 60px;
-    right: 20px;
+    left: 20px;
     width: 200px;
     border-radius: 8px;
     padding: 10px 0;
