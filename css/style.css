@@ -270,31 +270,37 @@ footer {
 
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-  .home h1 {
-    font-size: 2rem;
+  nav ul {
+    display: none; /* hide normal menu */
+    flex-direction: column;
+    background: #1f1f1f;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    width: 220px;
+    border-radius: 8px;
+    padding: 10px 0;
   }
-  .home p {
-    font-size: 1rem;
-    max-width: 90%;
+
+  nav ul.show {
+    display: flex; /* show when hamburger clicked */
   }
-  .skills-container {
-    max-width: 90%;
+
+  nav ul li {
+    margin: 12px 0;
+    text-align: center;
   }
-  .skill img {
-    width: 40px;
-    height: 40px;
-  }
-  .progress {
-    height: 10px;
-  }
-  .project-list {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+    position: absolute;
+    top: 15px;
+    left: 20px;
   }
 }
 
 /* Mobiles (max-width: 768px) */
 @media (max-width: 768px) {
-  /* Home */
   .home img.profile-pic {
     width: 180px;
     height: 180px;
@@ -322,7 +328,7 @@ footer {
 
   /* Projects */
   .project-list {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
   }
   .project-card {
     text-align: center;
@@ -333,7 +339,7 @@ footer {
 
   /* Contact */
   .contact-info {
-    grid-template-columns: 1fr; /* stack vertically */
+    grid-template-columns: 1fr;
   }
   .contact-card i {
     font-size: 1.5rem;
@@ -346,16 +352,13 @@ footer {
   }
 
   /* Navbar */
-  .menu-toggle {
-    display: block; /* show hamburger */
-  }
   nav ul {
-    display: none; /* hide default menu */
+    display: none; /* hide normal menu */
     flex-direction: column;
     background: #1f1f1f;
     position: absolute;
     top: 60px;
-    right: 20px;
+    left: 20px;
     width: 200px;
     border-radius: 8px;
     padding: 10px 0;
@@ -366,6 +369,12 @@ footer {
   nav ul li {
     margin: 10px 0;
     text-align: center;
+  }
+  .menu-toggle {
+    display: block; /* show hamburger */
+    position: absolute;
+    top: 15px;
+    left: 20px;
   }
 }
 
